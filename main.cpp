@@ -2,19 +2,31 @@
 
 using namespace std;
 
-int main()
-{
-    int a;
-    int b;
-    int sum;
+class A1{
+    public: 
+     float a1;
+     float a2;
+    
+     void tail(){
+        cout << "\nВведите два числа: ";
+        cin >> a1 >> a2;
+        }; 
+        
+     virtual void paw(){
+         };
+        
+};
 
-    cout << "podaj liczby:" << endl;
-    cin >> a;
-    cout << "podaj drugu liczbu:" << endl;
-    cin >> b;
-    sum = a + b;
-    cout << "suma = " << sum << endl;
 
 
-    return 0;
-}
+class Dodavanie : public A1{
+    public:
+     float s;
+     virtual void paw(){
+        cout << "\n-----Вы выбрали сумму-----";
+        tail();
+        s = a1 + a2;
+        cout << "\n-----Ответ: " << s << " -----";
+     };
+    
+};
