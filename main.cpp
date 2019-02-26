@@ -25,3 +25,26 @@ class Dodavanie : public A1{
      };
     
 };
+
+class Otnimanie : public A1{
+    public:
+     float m;
+     void minus(){
+        cout << "-----Вы выбрали разницу-----"; 
+        tail();
+        m = a1 - a2;
+        cout << "\n-----Ответ: " << m << " -----";
+     };
+    
+};
+class Umnizenie : public A1{
+    public:
+     float p;
+     void umn(){
+        cout << "-----Вы выбрали умножение-----";
+        tail();
+        p = a1 * a2;
+        cout << "\n-----Ответ: " << p << " -----";
+     };
+    
+};
