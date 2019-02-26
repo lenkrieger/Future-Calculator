@@ -47,4 +47,14 @@ class Umnizenie : public A1{
         cout << "\n-----Ответ: " << p << " -----";
      };
     
+    class Srednia : public A1{
+    public:
+     float k;
+     void del(){
+        cout << "-----Вы выбрали деление-----";
+        tail();
+        k = (a1 + a2)/2;
+        cout << "\n-----Ответ: " << k << " -----";
+     };
+    
 };
