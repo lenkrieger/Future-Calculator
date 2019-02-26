@@ -47,10 +47,10 @@ class Umnizenie : public A1{
         cout << "\n-----Ответ: " << p << " -----";
      };
     
-    class Srednia : public A1{
+class Srednia : public A1{
     public:
      float k;
-     void del(){
+     void sre(){
         cout << "-----Вы выбрали деление-----";
         tail();
         k = (a1 + a2)/2;
@@ -58,3 +58,65 @@ class Umnizenie : public A1{
      };
     
 };
+    
+class Delenie : public A1{
+    public:
+     float i;
+     void del(){
+        cout << "-----Вы выбрали деление-----";
+        tail();
+        i = a1 / a2;
+        cout << "\n-----Ответ: " << i << " -----";
+     };
+    
+};
+
+int main()
+{   int o1;
+
+Dodavanie Dod;
+Otnimanie Otn;
+Umnizenie Umn;
+Delenie Del;
+Srednia Ser;
+
+
+
+    cout << "Канкулятор\n";
+    cout << "-----MENU-----\n";
+    cout << "1.Сумма\n";
+    cout << "2.Разница\n";
+    cout << "3.Умножение\n";
+    cout << "4.Деление\n";
+    cout << "5.Среднее двух чисел\n";
+    cout << "0.Выйти из программы\n\n";
+    
+    cin >> o1;
+
+switch(o1)
+    {
+        case 1:
+           Dod.summa();
+            break;
+        case 2:
+           Otn.minus();
+            break;
+        case 3:
+           Umn.umn();
+            break;
+        case 4:
+           Del.del();
+            break;
+        case 5:
+           Ser.sre();
+            break;
+        case 0:
+            break;
+            
+        default: 
+           cout << "Данная опция отсутствует...\n";
+            break;
+    }
+
+    return 0;
+}
